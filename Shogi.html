@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>将棋</title>
+    <script src = "Scripts\Shogi.js"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <div id = "History"><a href="History.html">更新履歴</a></div>
+    <input type="button" id = "init_button" value="起動" onclick="OnInitButtonClick();Init();">
+    <input type="button" id = "reload_button" value="ページを更新" onclick="location.reload();" style="visibility: hidden;">
+    <form name="Coordinate" id = "Coordinate" style="visibility: hidden;">
+        <input type="text" name="coordinate" placeholder = "動かしたい駒の座標"></br>
+        <input type="text" name="destination" placeholder = "移動先の座標">
+		<input type="button" value="移動" onclick="OnCoordinateClick();">
+    </form></br>
+    <form name="Stand" id = "Stand" style="visibility: hidden;">
+        <input type="text" name="piece_name" placeholder="駒の名前"></br>
+        <input type="text" name="coordinate" placeholder = "打つ場所">
+        <input type="button" value="駒台" onclick="OnStandClick();" >
+    </form>
+    <div id = "WINNER"></div>
+    <div id = "BOARD"></div>
+
+</body>
+</html>
